@@ -19,7 +19,7 @@ public class ReadExcel {
 		try
 		{
 		
-		XSSFWorkbook workbook= new XSSFWorkbook("C:\\Users\\DELL\\eclipse-workspace\\selenium_learning\\src\\test\\resources\\Boo.xlsx");
+		XSSFWorkbook workbook= new XSSFWorkbook ("C:\\Users\\DELL\\eclipse-workspace\\selenium_learning\\src\\test\\resources\\Boo.xlsx");
 		
 		//XSSFSheet sheet= workbook.getSheet("data");
 		XSSFSheet sheet= workbook.getSheetAt(0);

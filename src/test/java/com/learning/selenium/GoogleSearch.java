@@ -22,6 +22,7 @@ public class GoogleSearch {
 			Thread.sleep(3000);
 			driver.findElement(By.xpath("//h3[text()='Downloads']")).click();
 			Thread.sleep(5000);
+			driver.close();
 			
 			
 		}
