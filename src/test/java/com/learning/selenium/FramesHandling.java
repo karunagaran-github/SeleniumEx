@@ -25,18 +25,18 @@ public class FramesHandling {
 		 */
 		
 		//by index
-		//driver.switchTo().frame(0);
+		driver.switchTo().frame(0);
 		
 		//by name or id
 		//driver.switchTo().frame("mce_0_ifr");
 		
-		WebElement frame= driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']"));
-		driver.switchTo().frame(frame);
+		//WebElement frame= driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']"));
+		//driver.switchTo().frame(frame);
 		
 		
 		driver.findElement(By.id("tinymce")).clear();
 		Thread.sleep(1000);
-		driver.findElement(By.id("tinymce")).sendKeys("Learning frames");
+		driver.findElement(By.id("tinymce")).sendKeys("Hello people");
 		
 		//to come out of the frame
 		driver.switchTo().defaultContent();

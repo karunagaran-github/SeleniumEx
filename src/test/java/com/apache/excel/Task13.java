@@ -1,5 +1,8 @@
 package com.apache.excel;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 
@@ -11,39 +14,93 @@ public class Task13 {
 
 	public static void main(String[] args) {
         // Create a new XLSX workbook
-        Workbook workbook = new XSSFWorkbook();
+		
+		try
+		{
+        XSSFWorkbook workbook = new XSSFWorkbook ("C:\\Users\\DELL\\eclipse-workspace\\tasksrepo\\src\\test\\resources\\Task13.xlsx");
+        XSSFSheet sheet = workbook.getSheetAt(0);
+        XSSFRow firstRow = sheet.getRow(0);
+        XSSFCell firstCell= firstRow.getCell(0);
         
-        // Create a new sheet named "DataSheet"
-        Sheet sheet = workbook.createSheet("DataSheet");
+       
+        XSSFCell fourthCell = firstRow.createCell(4);
+        fourthCell.setCellValue("ID");
         
-        try {
-            // Write data to 5 rows and 5 columns
-            for (int row = 0; row < 5; row++) {
-                Row currentRow = sheet.createRow(row);
-                for (int col = 0; col < 5; col++) {
-                    Cell cell = currentRow.createCell(col);
-                    cell.setCellValue("Data at Row " + (row + 1) + ", Column " + (col + 1));
-                }
-            }
+        
+        ///For Reading data in Excel
 
-            // Save the workbook to a file
-            try (FileOutputStream fileOut = new FileOutputStream("output.xlsx")) {
-                workbook.write(fileOut);
-            }
+        
+        DataFormatter dataFormatter = new DataFormatter();
+        
+        for (Row rowAll : sheet) {
+            for (Cell cellAll : rowAll) {
+                String cellValue = dataFormatter.formatCellValue(cellAll);
 
-            System.out.println("Data has been written to the Excel sheet.");
-
-        }catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                // Close the workbook
-                workbook.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+                System.out.print(cellValue + "\t");
             }
+            System.out.println();
         }
+        
+        ///For Write data in Excel
+        
+        /*XSSFRow SixthRow = sheet.getRow(5);
+        XSSFCell sixthRowFirstCell = SixthRow.getCell(0);
+        sixthRowFirstCell.setCellValue("22");*/
+      
+		}
+		
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
     }
-}
+	
+	
+	
+	
+	
+	///For Write data in Excel
+	public void writedata() {
+		XSSFWorkbook book1= new XSSFWorkbook();
+		XSSFSheet sheet2 = book1.createSheet("second sheet");
+		
+		Object [][] data = {
+				{"Name","Age","Email ID"},
+				{"John Doe","30","John@test.com"},
+				{"Jane Doe","28","john@test.com"},
+				{"Bob Smith","35","jacky@example.com"},
+				{"Swapnil","37","joe@example.com"}
+		};
+		
+		int rowCount =0;
+		for(Object[] row1 :data) {
+			XSSFRow row = sheet2.createRow(rowCount++);
+			
+			int columnCount =0;
+			
+			for(Object col: row1) {
+				XSSFCell cell =row.createCell(columnCount++);
+				if(col instanceof String) {
+					cell.setCellValue((String)col);
+				}
+				else if (col instanceof Integer) {
+					cell.setCellValue((Integer)col);
+				}
+					
+					
+					
+					
+					
+				}
+			}
+		}
+				
+		}
+				
+	
+
+	
+		
+
 
 	

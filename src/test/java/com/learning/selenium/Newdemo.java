@@ -47,9 +47,7 @@ public class Newdemo {
     	   {
     		   System.out.println("Fail");}
     	   
-    	   
-    	   
-    	   
+    	     	   
     	   
        }
     }

@@ -1,37 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-02T10:39:03 IST" name="Default suite" finished-at="2023-11-02T10:39:19 IST" duration-ms="16236">
+  <suite started-at="2023-11-07T12:01:53 IST" name="Suite" finished-at="2023-11-07T12:02:12 IST" duration-ms="18909">
     <groups>
     </groups>
-    <test started-at="2023-11-02T10:39:03 IST" name="Default test" finished-at="2023-11-02T10:39:19 IST" duration-ms="16236">
-      <class name="com.learning.testng.TestNGInvocation">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:null]" started-at="2023-11-02T10:39:03 IST" name="launchBrowser" finished-at="2023-11-02T10:39:12 IST" duration-ms="9564" status="PASS">
+    <test started-at="2023-11-07T12:01:53 IST" name="chromeTest" finished-at="2023-11-07T12:02:01 IST" duration-ms="7726">
+      <class name="com.learning.testng.CrossBrowser">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:com.learning.testng.CrossBrowser@3c19aaa5]" started-at="2023-11-07T12:01:54 IST" name="launchBrowser" finished-at="2023-11-07T12:01:58 IST" duration-ms="3957" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:null]" started-at="2023-11-02T10:39:03 IST" name="launchBrowser" finished-at="2023-11-02T10:39:12 IST" duration-ms="9567" status="PASS">
+        <test-method signature="validateTitle()[pri:0, instance:com.learning.testng.CrossBrowser@3c19aaa5]" started-at="2023-11-07T12:01:58 IST" name="validateTitle" finished-at="2023-11-07T12:02:01 IST" duration-ms="3684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTitle -->
+      </class> <!-- com.learning.testng.CrossBrowser -->
+    </test> <!-- chromeTest -->
+    <test started-at="2023-11-07T12:02:01 IST" name="EdgeTest" finished-at="2023-11-07T12:02:12 IST" duration-ms="11066">
+      <class name="com.learning.testng.CrossBrowser">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:com.learning.testng.CrossBrowser@7e6f74c]" started-at="2023-11-07T12:02:01 IST" name="launchBrowser" finished-at="2023-11-07T12:02:09 IST" duration-ms="7517" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:null]" started-at="2023-11-02T10:39:03 IST" name="launchBrowser" finished-at="2023-11-02T10:39:12 IST" duration-ms="9563" status="PASS">
+        <test-method signature="validateTitle()[pri:0, instance:com.learning.testng.CrossBrowser@7e6f74c]" started-at="2023-11-07T12:02:09 IST" name="validateTitle" finished-at="2023-11-07T12:02:12 IST" duration-ms="3538" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method signature="launchFacebook()[pri:0, instance:com.learning.testng.TestNGInvocation@74f0ea28]" started-at="2023-11-02T10:39:12 IST" name="launchFacebook" finished-at="2023-11-02T10:39:18 IST" duration-ms="5339" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchFacebook -->
-        <test-method signature="launchFacebook()[pri:0, instance:com.learning.testng.TestNGInvocation@74f0ea28]" started-at="2023-11-02T10:39:12 IST" name="launchFacebook" finished-at="2023-11-02T10:39:19 IST" duration-ms="6545" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchFacebook -->
-        <test-method signature="launchFacebook()[pri:0, instance:com.learning.testng.TestNGInvocation@74f0ea28]" started-at="2023-11-02T10:39:12 IST" name="launchFacebook" finished-at="2023-11-02T10:39:18 IST" duration-ms="5992" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchFacebook -->
-      </class> <!-- com.learning.testng.TestNGInvocation -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- validateTitle -->
+      </class> <!-- com.learning.testng.CrossBrowser -->
+    </test> <!-- EdgeTest -->
+  </suite> <!-- Suite -->
 </testng-results>
